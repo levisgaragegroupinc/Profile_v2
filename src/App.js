@@ -1,14 +1,11 @@
 import "./App.css";
-// component import example
-// import BucketList from "./components/BucketList";
+import About from "./components/About";
 
 function App() {
   return (
-    /* EXAMPLE OF USE
-    <div className="bucket-app">
-      <BucketList />
+    <div>
+      <About />
     </div>
-    */
   );
 }
 
