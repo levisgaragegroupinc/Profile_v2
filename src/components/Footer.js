@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Footer() {
-  return <p>This is the footer component</p>;
+  return <p>Hello Footer</p>;
 }
 
 export default Footer;

@@ -1,4 +1,4 @@
-const portfolioProjects = [
+const projectPortfolio = [
   {
     id: 1,
     project_image: "tech_01.png",
@@ -44,3 +44,5 @@ const portfolioProjects = [
     ],
   },
 ];
+
+export default projectPortfolio;
