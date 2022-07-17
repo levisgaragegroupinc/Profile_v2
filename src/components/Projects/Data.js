@@ -43,6 +43,62 @@ const projectPortfolio = [
       "Trustifi",
     ],
   },
+  {
+    id: 3,
+    project_image: "wx_01.png",
+    project_title: "Open Weather App",
+    description: "A 5-day forecast weather app. Save locations.",
+    repo_url: "https://github.com/levisgaragegroupinc/open-weather-app",
+    app_url: "https://levisgaragegroupinc.github.io/open-weather-app/",
+    code_stack: ["HTML", "CSS", "Javascript", "Moment.js", "OpenWeather API"],
+  },
+  {
+    id: 4,
+    project_image: "quiz_01.png",
+    project_title: "Quiz App",
+    description:
+      "An app that tests users knowledge of the Javascript programming language.",
+    repo_url: "https://github.com/levisgaragegroupinc/Programming-Quiz",
+    app_url: "https://levisgaragegroupinc.github.io/Programming-Quiz/",
+    code_stack: ["HTML", "CSS", "Javascript"],
+  },
+  {
+    id: 5,
+    project_image: "translation_01.png",
+    project_title: "Translation App",
+    description: "Translate sentences from English into 17 other languages.",
+    repo_url: "https://github.com/levisgaragegroupinc/translation_app",
+    app_url: "https://levisgaragegroupinc.github.io/translation_app/",
+    code_stack: [
+      "HTML",
+      "CSS",
+      "Foundation framework",
+      "Javascript",
+      "JQuery",
+      "Google translate API",
+      "Merriam-Webster's Dictionary API",
+      "Merriam-Webster's Thesaurus API",
+    ],
+  },
+  {
+    id: 6,
+    project_image: "notes_01.png",
+    project_title: "Notes",
+    description:
+      "A simple note taker. Add and delete notes. Notes include title.",
+    repo_url: "https://github.com/levisgaragegroupinc/note-keeper",
+    app_url: "https://glacial-plains-24658.herokuapp.com/notes",
+    code_stack: [
+      "HTML",
+      "CSS",
+      "Bootstrap framework",
+      "Fontawesome",
+      "Javascript",
+      "Express",
+      "UUID",
+      "Heroku",
+    ],
+  },
 ];
 
 export default projectPortfolio;
