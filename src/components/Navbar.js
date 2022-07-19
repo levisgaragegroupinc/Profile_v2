@@ -53,7 +53,6 @@ function NavBar({ currentPage, handlePageChange }) {
                     ? "restyle-nav-01"
                     : "restyle-nav-links"
                 }
-                target="_blank"
               >
                 resume
               </a>
