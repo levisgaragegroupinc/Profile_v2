@@ -1,11 +1,9 @@
-/* Universal Selector*/
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style-type: none;
     text-decoration: none;
 }
 
-/* color variables*/
 :root {
     --black: #31343D;
     --black-op-01: #31343d83; 
@@ -24,7 +22,6 @@
     --green-01: #099531;
 }
 
-/* elements */
 a {
     font-size: 16px;
     text-decoration: none;
@@ -35,10 +32,9 @@ a:hover {
     text-decoration: none;
 }
 
-/* color and style overides */
 .dark {
     background-color: var(--black-op-01);
-} */
+}
 
 .white {
     color: var(--white);

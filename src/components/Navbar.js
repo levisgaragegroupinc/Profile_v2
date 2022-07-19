@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import HoverListBtn from "./Buttons/HoverListBtn";
 
 const projectList = [
@@ -28,7 +28,7 @@ const projectList = [
   },
 ];
 
-function NavBar() {
+function NavBar({ currentPage, handlePageChange }) {
   return (
     <>
       <nav
@@ -44,24 +44,51 @@ function NavBar() {
             <HoverListBtn list={projectList} />
             <li>
               <a
-                className="restyle-nav-links"
-                href="./public/files/resume-tlb-2022v2.pdf"
+                // className="restyle-nav-links"
+                href="#resume"
+                onClick={() => handlePageChange("Resume")} // WORKING ON
+                // href="./public/files/resume-tlb-2022v2.pdf"
+                className={
+                  currentPage === "Resume"
+                    ? "restyle-nav-01"
+                    : "restyle-nav-links"
+                }
                 target="_blank"
               >
                 resume
               </a>
             </li>
             <li>
-              <a className="restyle-nav-links" href="#about">
+              <a
+                // className="restyle-nav-links"
+                href="#about"
+                onClick={() => handlePageChange("About")} //WORKING ON
+                className={
+                  currentPage === "About"
+                    ? "restyle-nav-01"
+                    : "restyle-nav-links"
+                }
+              >
                 about
               </a>
             </li>
             <li>
-              <a
+              {/* <a
                 className="restyle-nav-links"
                 uk-toggle="target: #offcanvas-usage"
               >
                 contact
+              </a> */}
+              <a
+                href="#contact"
+                onClick={() => handlePageChange("Contact")} //WORKING ON
+                className={
+                  currentPage === "Contact"
+                    ? "restyle-nav-01"
+                    : "restyle-nav-links"
+                }
+              >
+                Contact
               </a>
             </li>
           </ul>

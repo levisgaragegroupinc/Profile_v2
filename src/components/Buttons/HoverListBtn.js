@@ -14,7 +14,7 @@ function HoverListBtn(props) {
             i += 1;
             return (
               <li key={i}>
-                <a className="restyle-nav-links" href="{item.anchor_tag}">
+                <a className="restyle-nav-links" href={item.anchor_tag}>
                   {item.title}
                 </a>
               </li>
