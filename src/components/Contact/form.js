@@ -2,13 +2,13 @@ import React from "react";
 
 function Form() {
   return (
-    <>
+    <div className="uk-margin-auto">
       <form className="uk-form-stacked">
         <div className="uk-margin">
-          <label class="uk-form-label" for="firstname">
+          <label className="uk-form-label" htmlFor="firstname">
             First Name
           </label>
-          <div class="uk-form-contrls">
+          <div className="uk-form-contrls">
             <input
               className="uk-input uk-form-small uk-form-width-medium"
               id="firstname"
@@ -18,10 +18,10 @@ function Form() {
           </div>
         </div>
         <div className="uk-margin">
-          <label class="uk-form-label" for="lastname">
+          <label className="uk-form-label" htmlFor="lastname">
             Last Name
           </label>
-          <div class="uk-form-contrls">
+          <div className="uk-form-contrls">
             <input
               className="uk-input uk-form-small uk-form-width-medium"
               id="lastname"
@@ -31,10 +31,10 @@ function Form() {
           </div>
         </div>
         <div className="uk-margin">
-          <label class="uk-form-label" for="company">
+          <label className="uk-form-label" htmlFor="company">
             Company
           </label>
-          <div class="uk-form-contrls">
+          <div className="uk-form-contrls">
             <input
               className="uk-input uk-form-small uk-form-width-medium"
               id="company"
@@ -44,10 +44,10 @@ function Form() {
           </div>
         </div>
         <div className="uk-margin">
-          <label class="uk-form-label" for="email">
+          <label className="uk-form-label" htmlFor="email">
             Email
           </label>
-          <div class="uk-form-contrls">
+          <div className="uk-form-contrls">
             <input
               className="uk-input uk-form-small uk-form-width-medium"
               id="email"
@@ -57,10 +57,10 @@ function Form() {
           </div>
         </div>
         <div className="uk-margin">
-          <label class="uk-form-label" for="phone">
+          <label className="uk-form-label" htmlFor="phone">
             Phone
           </label>
-          <div class="uk-form-contrls">
+          <div className="uk-form-contrls">
             <input
               className="uk-input uk-form-small uk-form-width-medium"
               id="phone"
@@ -70,7 +70,7 @@ function Form() {
           </div>
         </div>
         <div className="uk-margin">
-          <label className="uk-form-label" for="textarea">
+          <label className="uk-form-label" htmlFor="textarea">
             Message
           </label>
           <div className="uk-form-controls">
@@ -85,7 +85,7 @@ function Form() {
         </div>
         <button className="uk-button uk-button-default">Submit</button>
       </form>
-    </>
+    </div>
   );
 }
 

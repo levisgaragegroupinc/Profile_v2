@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import TitleDivider from "./Dividers/Divider";
+import Divider from "./Dividers/Divider";
+import Heading from "./Dividers/Heading";
 
 const title = "About";
 
 function About() {
   return (
     <div>
-      <TitleDivider title={title} />
+      <Divider />
+      <Heading title={title} />
       <p>Hello About Me</p>
     </div>
   );

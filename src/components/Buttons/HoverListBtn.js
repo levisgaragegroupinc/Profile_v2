@@ -5,7 +5,7 @@ function HoverListBtn(props) {
 
   return (
     <li>
-      <a className="restyle-nav-links" href="#">
+      <a className="restyle-nav-links" href="#Project">
         Projects
       </a>
       <div className="uk-navbar-dropdown restyle-background-01">

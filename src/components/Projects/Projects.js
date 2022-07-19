@@ -1,14 +1,16 @@
 import React from "react";
 import Card from "./Card";
 import projectPortfolio from "./Data";
-import TitleDivider from "../Dividers/Divider";
+import Divider from "../Dividers/Divider";
+import Heading from "../Dividers/Heading";
 
 const title = "Projects";
 
 function Projects() {
   return (
     <div>
-      <TitleDivider title={title} />
+      <Divider />
+      <Heading title={title} />
       <div
         className="restyle-background-muted uk-padding-large uk-child-width-1-2@m uk-child-width-1-3@xl"
         id="project-section"
