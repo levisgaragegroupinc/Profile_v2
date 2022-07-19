@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.210b4b97.css",
+    "main.js": "/static/js/main.61e69bd2.js",
+    "static/media/knack_01.png": "/static/media/knack_01.5408e4814e9c864d3f9e.png",
+    "static/media/translation_01.png": "/static/media/translation_01.1727add0c64f9a5e1c14.png",
+    "static/media/profile_01.png": "/static/media/profile_01.6ea7d318bfc32c3183a6.png",
+    "static/media/wx_01.png": "/static/media/wx_01.7bf589d8ac6a1cfe7482.png",
+    "static/media/schedule_01.png": "/static/media/schedule_01.a926fd2736d0438a169c.png",
+    "static/media/grounds_01.png": "/static/media/grounds_01.2245ddd6f32bb7a53d8f.png",
+    "static/media/quiz_01.png": "/static/media/quiz_01.36f2c3d7b78f239449e3.png",
+    "static/media/tech_01.png": "/static/media/tech_01.d6a53c5fe17a55979ed0.png",
+    "static/media/notes_01.png": "/static/media/notes_01.2a92cd8a719bce28034f.png",
+    "index.html": "/index.html",
+    "main.210b4b97.css.map": "/static/css/main.210b4b97.css.map",
+    "main.61e69bd2.js.map": "/static/js/main.61e69bd2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.210b4b97.css",
+    "static/js/main.61e69bd2.js"
+  ]
+}
