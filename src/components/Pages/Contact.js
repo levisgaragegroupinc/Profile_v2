@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Divider from "./Dividers/Divider";
-import Heading from "./Dividers/Heading";
-import Form from "./Contact/form";
+import Divider from "../Dividers/Divider";
+import Heading from "../Dividers/Heading";
+import Form from "../Contact/form";
 
 const title = "Contact";
 

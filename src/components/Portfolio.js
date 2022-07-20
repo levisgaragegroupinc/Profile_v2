@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import NavBar from "./Navbar";
-import Projects from "./Projects/Projects";
-import About from "./About";
-import Resume from "./Resume";
-import Contact from "./Contact";
+import Projects from "./Pages/Projects";
+import About from "./Pages/About";
+import Resume from "./Pages/Resume";
+import Contact from "./Pages/Contact";
 import Footer from "./Footer";
 
 function Portfolio() {

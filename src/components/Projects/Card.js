@@ -5,7 +5,7 @@ function Card(props) {
   let image = props.data.project_image;
   let title = props.data.project_title;
   let description = props.data.description;
-  let anchor = props.data.anchor_tag;
+  let anchorId = props.data.anchor_tag;
   let repoUrl = props.data.repo_url;
   let appUrl = props.data.app_url;
   let stack = props.data.code_stack;
@@ -13,7 +13,7 @@ function Card(props) {
 
   return (
     <div key={id}>
-      <div id={anchor}>
+      <div id={anchorId}>
         <div className="uk-card uk-card-default">
           <div
             className="uk-card-media-top uk-cover-container"

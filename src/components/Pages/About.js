@@ -1,7 +1,7 @@
 import React from "react";
-import Divider from "./Dividers/Divider";
-import Heading from "./Dividers/Heading";
-import profileImg from "../assets/profile_01.png";
+import Divider from "../Dividers/Divider";
+import Heading from "../Dividers/Heading";
+import profileImg from "../../assets/profile_01.png";
 
 const title = "About";
 

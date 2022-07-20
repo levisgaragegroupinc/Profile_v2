@@ -1,8 +1,8 @@
 import React from "react";
-import Divider from "./Dividers/Divider";
-import Heading from "./Dividers/Heading";
-import resumePdf from "../assets/Resume-01.pdf";
-let imagePath = require(`../assets/resume-img.png`);
+import Divider from "../Dividers/Divider";
+import Heading from "../Dividers/Heading";
+import resumePdf from "../../assets/Resume-01.pdf";
+let imagePath = require(`../../assets/resume-img.png`);
 const title = "Resume";
 
 function Resume() {
