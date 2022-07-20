@@ -6,7 +6,7 @@ function DropDown(props) {
   return (
     <nav className="uk-padding" uk-navbar="true">
       <a
-        className="uk-button uk-button-default restyle-background-01"
+        className="uk-button uk-button-default restyle-background-01 restyle-nav-links"
         href="#Project"
       >
         Project List
