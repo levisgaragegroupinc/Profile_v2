@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { emailValidation, phoneValidation } from "../../utils/helpers";
 
 function Form() {
+  // set state and state update functions for handleInputEvent
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [company, setCompany] = useState("");
@@ -9,46 +10,13 @@ function Form() {
   const [phone, setphone] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  // Handle lose focus event
+  // Set state and update state functions for lost focus handleOnBlur
   const [firstNameEmpty, setFirstNameEmpty] = useState(false);
   const [lastNameEmpty, setLastNameEmpty] = useState(false);
   const [emailEmpty, setEmailEmpty] = useState(false);
   const [phoneEmpty, setPhoneEmpty] = useState(false);
 
-  // let firstNameEmpty,
-  //   lastNameEmpty,
-  //   emailEmpty,
-  //   phoneEmpty = false;
-
-  // const [formState, setFormState] = useState({
-  //   firstname: "",
-  //   lastname: "",
-  //   email: "",
-  //   phone: "",
-  // });
-
-  // const { firstname, lastname, email, phone } = formState;
-
-  // const handleLooseFocus = (event) => {
-  //   setFormState({
-  //     ...formState,
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
-
-  const handleOnBlur = (event) => {
-    const { target } = event;
-    const inputType = target.name;
-    const inputValue = target.value;
-
-    if (inputType === "firstname" && inputValue === null) {
-      setFirstNameEmpty(true);
-      setFirstname("");
-    }
-  };
-
   // Handle change event
-
   const handleInputEvent = (event) => {
     event.preventDefault();
     const { target } = event;
@@ -70,6 +38,39 @@ function Form() {
     }
   };
 
+  // Handle on lost focus
+  const handleOnBlur = (event) => {
+    const { target } = event;
+    const inputType = target.id;
+    const inputValue = target.value;
+
+    if (inputType === "firstname") {
+      let formState = inputValue.length ? "" : "First Name is required";
+      setErrorMessage(formState);
+      let inputString = inputValue.length ? false : true;
+      setFirstNameEmpty(inputString);
+    } else if (inputType === "lastname") {
+      let formState = inputValue.length ? "" : "Last Name is required";
+      setErrorMessage(formState);
+      let inputString = inputValue.length ? false : true;
+      setLastNameEmpty(inputString);
+    } else if (inputType === "email") {
+      let formState = emailValidation(inputValue)
+        ? ""
+        : "Email is invalid/Required";
+      setErrorMessage(formState);
+      let inputString = inputValue.length ? false : true;
+      setEmailEmpty(inputString);
+    } else if (inputType === "phone") {
+      let formState = phoneValidation(inputType)
+        ? ""
+        : "Phone is invalid/Required";
+      setErrorMessage(formState);
+      let inputString = inputValue.length ? false : true;
+      setPhoneEmpty(inputString);
+    }
+  };
+
   // Handle submit event
   const handleSubmitEvent = (event) => {
     event.preventDefault();
@@ -85,6 +86,7 @@ function Form() {
       setErrorMessage("Enter both a first and last name!");
       return;
     }
+    // Clear fields after submit
     setFirstname("");
     setLastname("");
     setCompany("");
@@ -96,6 +98,9 @@ function Form() {
 
   return (
     <div className="uk-margin-auto">
+      <p className="uk-text-default uk-text-bold uk-text-danger">
+        {errorMessage}
+      </p>
       <form className="uk-form-stacked">
         <div className="uk-margin">
           <label className="uk-form-label" htmlFor="firstname">
