@@ -6,6 +6,8 @@ import Heading from "../Dividers/Heading";
 import DropDown from "../Buttons/DropDown";
 
 const title = "Projects";
+const labelBtnDropdown = "Project List";
+
 const projectList = [
   {
     title: "Technology Blog",
@@ -38,7 +40,7 @@ function Projects() {
     <div>
       <Divider />
       <Heading title={title} />
-      <DropDown list={projectList} />
+      <DropDown list={projectList} btnLabel={labelBtnDropdown} />
       <div
         className="restyle-background-muted uk-padding-large uk-child-width-1-2@m uk-child-width-1-3@xl"
         id="project-section"
