@@ -1,7 +1,7 @@
 import React from "react";
 import Divider from "./Dividers/Divider";
 import Heading from "./Dividers/Heading";
-import pdf from "../assets/Resume-01.pdf";
+import resumePdf from "../assets/Resume-01.pdf";
 let imagePath = require(`../assets/resume-img.png`);
 const title = "Resume";
 
@@ -10,7 +10,15 @@ function Resume() {
     <div>
       <Divider />
       <Heading title={title} />
-      <a href={pdf} target="_blank" rel="noreferrer">
+      <div className="uk-flex uk-flex-center">
+        <a
+          href={resumePdf}
+          target="_blank"
+          rel="noreferrer"
+          uk-icon="icon: download; ratio: 2"
+        ></a>
+      </div>
+      <a href={resumePdf} target="_blank" rel="noreferrer">
         <img src={imagePath} alt="Resume."></img>
       </a>
     </div>

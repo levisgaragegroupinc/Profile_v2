@@ -1,32 +1,4 @@
 import React from "react";
-import HoverListBtn from "./Buttons/HoverListBtn";
-
-const projectList = [
-  {
-    title: "Technology Blog",
-    anchor_tag: "#techblog",
-  },
-  {
-    title: "KnickKnacks",
-    anchor_tag: "#knickknacks",
-  },
-  {
-    title: "Weather",
-    anchor_tag: "#weather",
-  },
-  {
-    title: "Quiz",
-    anchor_tag: "#quiz",
-  },
-  {
-    title: "Translation",
-    anchor_tag: "#translation",
-  },
-  {
-    title: "Notes",
-    anchor_tag: "#notes",
-  },
-];
 
 function NavBar({ currentPage, handlePageChange }) {
   return (
@@ -50,7 +22,6 @@ function NavBar({ currentPage, handlePageChange }) {
                 }
               ></a>
             </li>
-            <HoverListBtn list={projectList} />
             <li>
               <a
                 href="#resume"
