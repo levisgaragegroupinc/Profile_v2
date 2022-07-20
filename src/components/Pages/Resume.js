@@ -12,6 +12,7 @@ function Resume() {
       <Heading title={title} />
       <div className="uk-flex uk-flex-center">
         <a
+          aria-label="Download resume"
           href={resumePdf}
           target="_blank"
           rel="noreferrer"

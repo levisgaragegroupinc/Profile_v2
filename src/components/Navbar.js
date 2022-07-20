@@ -12,6 +12,7 @@ function NavBar({ currentPage, handlePageChange }) {
           <ul className="uk-navbar-nav">
             <li className="uk-active">
               <a
+                aria-label="home"
                 uk-icon="home"
                 href="#Project"
                 onClick={() => handlePageChange("Project")}
