@@ -9,16 +9,17 @@ function DropDown(props) {
         className="uk-button uk-button-default restyle-background-01 restyle-nav-links"
         href="#Project"
       >
-        Project List
+        {props.btnLabel}
       </a>
       <div className="uk-navbar-dropdown restyle-background-01">
         <ul className="uk-nav uk-navbar-dropdown-nav">
-          {props.list.map((item) => {
+          {props.projectData.map((project) => {
             i += 1;
+            let anchor = "#" + project.anchor_tag;
             return (
               <li key={i}>
-                <a className="restyle-nav-links" href={item.anchor_tag}>
-                  {item.title}
+                <a className="restyle-nav-links" href={anchor}>
+                  {project.project_title}
                 </a>
               </li>
             );
