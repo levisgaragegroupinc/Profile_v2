@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { emailValidation, phoneValidation } from "../../utils/helpers";
 
 function Form() {
@@ -9,12 +9,51 @@ function Form() {
   const [phone, setphone] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  // Handle lose focus event
+  const [firstNameEmpty, setFirstNameEmpty] = useState(false);
+  const [lastNameEmpty, setLastNameEmpty] = useState(false);
+  const [emailEmpty, setEmailEmpty] = useState(false);
+  const [phoneEmpty, setPhoneEmpty] = useState(false);
 
-  const inputEvent = (event) => {
+  // let firstNameEmpty,
+  //   lastNameEmpty,
+  //   emailEmpty,
+  //   phoneEmpty = false;
+
+  // const [formState, setFormState] = useState({
+  //   firstname: "",
+  //   lastname: "",
+  //   email: "",
+  //   phone: "",
+  // });
+
+  // const { firstname, lastname, email, phone } = formState;
+
+  // const handleLooseFocus = (event) => {
+  //   setFormState({
+  //     ...formState,
+  //     [event.target.name]: event.target.value,
+  //   });
+  // };
+
+  const handleOnBlur = (event) => {
     const { target } = event;
     const inputType = target.name;
     const inputValue = target.value;
-    const inputId = target.id;
+
+    if (inputType === "firstname" && inputValue === null) {
+      setFirstNameEmpty(true);
+      setFirstname("");
+    }
+  };
+
+  // Handle change event
+
+  const handleInputEvent = (event) => {
+    event.preventDefault();
+    const { target } = event;
+    const inputType = target.name;
+    const inputValue = target.value;
 
     if (inputType === "firstname") {
       setFirstname(inputValue);
@@ -31,7 +70,8 @@ function Form() {
     }
   };
 
-  const submitEvent = (event) => {
+  // Handle submit event
+  const handleSubmitEvent = (event) => {
     event.preventDefault();
     if (!emailValidation(email)) {
       setErrorMessage("Email is invalid!");
@@ -51,6 +91,7 @@ function Form() {
     setEmail("");
     setphone("");
     setMessage("");
+    setErrorMessage("");
   };
 
   return (
@@ -62,11 +103,16 @@ function Form() {
           </label>
           <div className="uk-form-contrls">
             <input
-              className="uk-input uk-form-small uk-form-width-medium"
+              className={
+                firstNameEmpty
+                  ? "uk-form-danger uk-input uk-form-small uk-form-width-medium"
+                  : "uk-input uk-form-small uk-form-width-medium"
+              }
               id="firstname"
               value={firstname}
               name="firstname"
-              onChange={inputEvent}
+              onChange={handleInputEvent}
+              onBlur={handleOnBlur}
               type="text"
               placeholder="Thor"
               required={true}
@@ -79,11 +125,16 @@ function Form() {
           </label>
           <div className="uk-form-contrls">
             <input
-              className="uk-input uk-form-small uk-form-width-medium"
+              className={
+                lastNameEmpty
+                  ? "uk-form-danger uk-input uk-form-small uk-form-width-medium"
+                  : "uk-input uk-form-small uk-form-width-medium"
+              }
               id="lastname"
               value={lastname}
               name="lastname"
-              onChange={inputEvent}
+              onChange={handleInputEvent}
+              onBlur={handleOnBlur}
               type="text"
               placeholder="Odinson"
               required={true}
@@ -100,7 +151,7 @@ function Form() {
               id="company"
               value={company}
               name="company"
-              onChange={inputEvent}
+              onChange={handleInputEvent}
               type="text"
               placeholder="Asgard"
             ></input>
@@ -112,11 +163,16 @@ function Form() {
           </label>
           <div className="uk-form-contrls">
             <input
-              className="uk-input uk-form-small uk-form-width-medium"
+              className={
+                emailEmpty
+                  ? "uk-form-danger uk-input uk-form-small uk-form-width-medium"
+                  : "uk-input uk-form-small uk-form-width-medium"
+              }
               id="email"
               value={email}
               name="email"
-              onChange={inputEvent}
+              onChange={handleInputEvent}
+              onBlur={handleOnBlur}
               type="text"
               placeholder="Thor@yahoo.com"
               required={true}
@@ -129,11 +185,16 @@ function Form() {
           </label>
           <div className="uk-form-contrls">
             <input
-              className="uk-input uk-form-small uk-form-width-medium"
+              className={
+                phoneEmpty
+                  ? "uk-form-danger uk-input uk-form-small uk-form-width-medium"
+                  : "uk-input uk-form-small uk-form-width-medium"
+              }
               id="phone"
               value={phone}
               name="phone"
-              onChange={inputEvent}
+              onChange={handleInputEvent}
+              onBlur={handleOnBlur}
               type="text"
               placeholder="(000) 000-0000"
               required={true}
@@ -151,14 +212,17 @@ function Form() {
               id="message"
               value={message}
               name="message"
-              onChange={inputEvent}
+              onChange={handleInputEvent}
               type="text"
               placeholder="Type your message here..."
             ></textarea>
           </div>
         </div>
         <div className="uk-flex">
-          <button className="uk-button uk-button-default" onClick={submitEvent}>
+          <button
+            className="uk-button uk-button-default"
+            onClick={handleSubmitEvent}
+          >
             Submit
           </button>
           {errorMessage && (

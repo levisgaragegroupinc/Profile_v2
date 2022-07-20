@@ -39,15 +39,22 @@ function NavBar({ currentPage, handlePageChange }) {
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav">
             <li className="uk-active">
-              <a className="restyle-links-active" uk-icon="home" href="#"></a>
+              <a
+                uk-icon="home"
+                href="#Project"
+                onClick={() => handlePageChange("Project")}
+                className={
+                  currentPage === "Project"
+                    ? "restyle-nav-01"
+                    : "restyle-nav-links"
+                }
+              ></a>
             </li>
             <HoverListBtn list={projectList} />
             <li>
               <a
-                // className="restyle-nav-links"
                 href="#resume"
-                onClick={() => handlePageChange("Resume")} // WORKING ON
-                // href="./public/files/resume-tlb-2022v2.pdf"
+                onClick={() => handlePageChange("Resume")}
                 className={
                   currentPage === "Resume"
                     ? "restyle-nav-01"
@@ -59,9 +66,8 @@ function NavBar({ currentPage, handlePageChange }) {
             </li>
             <li>
               <a
-                // className="restyle-nav-links"
                 href="#about"
-                onClick={() => handlePageChange("About")} //WORKING ON
+                onClick={() => handlePageChange("About")}
                 className={
                   currentPage === "About"
                     ? "restyle-nav-01"
@@ -72,15 +78,9 @@ function NavBar({ currentPage, handlePageChange }) {
               </a>
             </li>
             <li>
-              {/* <a
-                className="restyle-nav-links"
-                uk-toggle="target: #offcanvas-usage"
-              >
-                contact
-              </a> */}
               <a
                 href="#contact"
-                onClick={() => handlePageChange("Contact")} //WORKING ON
+                onClick={() => handlePageChange("Contact")}
                 className={
                   currentPage === "Contact"
                     ? "restyle-nav-01"
