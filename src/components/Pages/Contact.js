@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Divider from "../Dividers/Divider";
 import Heading from "../Dividers/Heading";
 import Form from "../Contact/form";

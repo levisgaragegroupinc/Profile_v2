@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LinkBtn from "./Buttons/LinkBtn";
 import Divider from "./Dividers/Divider";
 

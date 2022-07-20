@@ -59,6 +59,7 @@ function About() {
                   className=""
                   href="https://www.behance.net/nickfrank"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Nick Frank
                 </a>

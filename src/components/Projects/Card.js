@@ -36,12 +36,12 @@ function Card(props) {
                   </a>
                   <ul className="uk-nav-sub">
                     <li key={id + 20}>
-                      <a href={repoUrl} target="_blank">
+                      <a href={repoUrl} target="_blank" rel="noreferrer">
                         Repo
                       </a>
                     </li>
                     <li key={id + 30}>
-                      <a href={appUrl} target="_blank">
+                      <a href={appUrl} target="_blank" rel="noreferrer">
                         App
                       </a>
                     </li>
