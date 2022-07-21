@@ -8,5 +8,3 @@ export function phoneValidation(phone) {
     /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
   return phoneRegex.test(String(phone));
 }
-
-// /^\+?[0-9]{3}-?[0-9]{6,12}$/;
