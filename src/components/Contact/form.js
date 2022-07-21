@@ -62,7 +62,7 @@ function Form() {
       let inputString = inputValue.length ? false : true;
       setEmailEmpty(inputString);
     } else if (inputType === "phone") {
-      let formState = phoneValidation(inputType)
+      let formState = phoneValidation(inputValue)
         ? ""
         : "Phone is invalid/Required";
       setErrorMessage(formState);
