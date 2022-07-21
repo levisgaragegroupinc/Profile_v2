@@ -12,7 +12,7 @@ const footerLinks = [
     href: "mailto:tbateswsu@gmail.com",
   },
   {
-    name: "LinkdIn",
+    name: "LinkedIn",
     href: "https://www.linkedin.com/in/travis-bates-a27bb494/",
   },
   {
