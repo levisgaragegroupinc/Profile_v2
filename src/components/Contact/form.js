@@ -225,7 +225,7 @@ function Form() {
         </div>
         <div className="uk-flex">
           <button
-            className="uk-button uk-button-default"
+            className="uk-button uk-button-default restyle-background-01 restyle-nav-links"
             onClick={handleSubmitEvent}
           >
             Submit
